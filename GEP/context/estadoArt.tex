@@ -1,0 +1,193 @@
+\subsection{Estado del arte}
+El objetivo de este apartado es una investigación, análisis y valoración de las aplicaciones que ya existen de gestión de energía en el mercado.
+
+Antes de pasar a analizar las distintas posibilidades existentes se han de definir el seguido de criterios que se compararán de cada uno de ellos, estos criterios tendrán una descripción asociada y una escala que posteriormente se utilizará para la comparación final.
+
+Los criterios que se utilizarán se muestran en el cuadro \ref{tab:Criterios}:
+
+\begin{table}[h]
+\begin{tabular}{@{} m{1.5cm} m{2cm} m{5cm} m{4.5cm} @{}}
+\toprule
+\multicolumn{1}{l}{\textbf{Código}} & \textbf{Criterio} & \textbf{Descripción} & \textbf{Escala} \\ \midrule
+\textbf{C1} & 
+Registro en el sistema & 
+Se tendrá en cuenta si es obligatorio o no el registro en la aplicación y en caso de que sea obligatorio, se mirará la dificultad de este. La idea es que si es obligatorio el registro para poder tener unos datos personalizados, que este sea sencillo. &  
+\begin{tabular}[c]{m{4cm}}\textbf{1}: Registro obligatorio y complicado\\ \textbf{3}: Registro obligatorio y sencillo\\ \textbf{5}: No es necesario registrarse en el sistema (registro con redes sociales o extremadamente sencillo, correo electrónico y contraseña)\end{tabular}
+\\
+\textbf{C2}  & 
+Consejos  & 
+En nuestro caso no queremos solamente una aplicación de gestión energética, creemos una parte muy importante que la aplicación aporte información al usuario para mejorar su rendimiento energético. & 
+\begin{tabular}[c]{m{4cm}}\textbf{1}: No da consejos\\ \textbf{3}: Da consejos\\\textbf{5}: Da consejos y muestra \textit{feedback} al usuario\end{tabular} 
+\\
+\textbf{C3}                                                    & Gran cantidad de datos                                           & En muchos casos la tarea de rellenar formularios se vuelve tediosa. Por eso se tendrá en cuenta si el usuario tendrá que rellenar una gran cantidad de campos.                                                                                             & \begin{tabular}[c]{m{4cm}}\textbf{1}: Mucha información para rellenar\\ \textbf{3}: Poca información para rellenar\\ \textbf{5}: Cuenta con algún sistema para obtener la información de manera automática\end{tabular}                                                             \\ 
+\textbf{C4}                                                    & Retos                                                            & La aplicación busca enseñar al usuario y para esto le propone retos, de esta manera se le enseña y a la vez se le motiva para que utilice el sistema.                                                                                                      & \begin{tabular}[c]{m{4cm}}\textbf{1}: No tiene retos\\ \textbf{5}: Tiene retos\end{tabular}                                                                                                                                                                                \\
+\textbf{C5}                                                    & Datos Cambiantes                                                 & No nos interesa una aplicación estática, buscamos que el usuario mejore su eficiencia y para esto probablemente tendrá que ir cambiando los datos en el sistema.                                                                                           & \begin{tabular}[c]{m{4cm}}\textbf{1}: No se pueden cambiar los datos\\ \textbf{5}: Se pueden cambiar los datos\end{tabular}                                                                                                                                                \\
+\textbf{C6}                                                    & Información dispositivos externos                                & La aplicación es capaz de obtener información de dispositivos domóticos que capturan los datos de los hogares.                                                                                                                                             & \begin{tabular}[c]{m{4cm}}\textbf{1}: No es capaz de obtener la información de los dispositivos\\\textbf{5}: Es capaz de obtener la información de los dispositivos\end{tabular}                                                                                          \\
+\textbf{C7}                                                    & Aplicación móvil                                                 & Si la aplicación cuenta con una versión móvil, será más fácil que la utilice el usuario final.                                                                                                                                                             & \begin{tabular}[c]{m{4cm}}\textbf{1}: No tiene aplicación móvil\\ \textbf{5}: Tiene aplicación móvil\end{tabular}                                                                                                                                                          \\ 
+\textbf{C8}                                                    & Pago                                                             & Es importante saber si se trata de un sistema de pago o libre.                                                                                                                                                                                             & \begin{tabular}[c]{m{4cm}}\textbf{1}: Sistema de pago\\ \textbf{5}: Libre\end{tabular}                                                                                                                                                                                     \\ \bottomrule
+\end{tabular}
+\caption{Criterios a comparar \label{tab:Criterios}}
+\end{table}
+
+\FloatBarrier
+
+\newcommand{\estatArt}[9]{
+
+\begin{table}[h]
+\small
+\begin{center}
+\begin{tabular}{@{} cc @{}}
+\toprule
+\textbf{Código} & \textbf{Puntuación} \\ \midrule
+\textbf{C1} &  {#1}\\
+\textbf{C2} &  {#2}\\
+\textbf{C3} &  {#3}\\
+\textbf{C4} &  {#4}\\
+\textbf{C5} &  {#5}\\
+\textbf{C6} &  {#6}\\
+\textbf{C7} &  {#7}\\
+\textbf{C8} &  {#8}\\ \midrule
+\textbf{Total} & {#9} \\ \bottomrule
+\end{tabular}
+\end{center}
+\captionEstat
+}
+
+\newcommand\captionEstat[1]{
+   \caption{
+    {#1}
+    }
+    \end{table}
+    \FloatBarrier
+}
+
+\subsubsection{Opower}
+
+Opower~\cite{opower} es una herramienta de gestión energética que esta en el mercado actualmente, esta herramienta se encarga de mostrar al usuario los datos energéticos de su hogar. Una vez los usuarios se han registrado en el sistema, estos obtienen un análisis de los datos que han introducido y el sistema les ofrece maneras de mejorar su eficiencia energética.
+
+La puntuación de Opower se muestra en el cuadro \ref{tab:opower}:
+
+\estatArt
+{1}
+{5}
+{5}
+{5}
+{5}
+{5}
+{5}
+{1}
+{32}
+{Puntuación Opower \label{tab:opower}}
+
+\subsubsection{Enerbyte}
+
+Enerbyte~\cite{enerbyte} es una herramienta multiplataforma que fomenta la eficiencia energética entre sus usuarios. A partir de los datos que los usuarios introducen en el sistema, esta herramienta tiene distintas funcionalidades: ofrece planes personalizados a los usuarios, a partir de la gamificación impulsa la mejora energética y permite comparaciones entre amigos y mediante un algoritmo especializado se encarga de mostrar el gasto eléctrico dividido en sectores (como puede ser calefacción, luces, entre otros).
+
+La puntuación de Enerbyte se muestra en el cuadro \ref{tab:enerbyte}:
+
+\estatArt
+{1}
+{5}
+{5}
+{5}
+{5}
+{5}
+{5}
+{1}
+{32}
+{Puntuación Enerbyte \label{tab:enerbyte}}
+
+
+\subsubsection{Leafully}
+
+Leafully~\cite{leafully} es una herramienta que busca ayudar al usuario a entender su gasto energético. La aplicación permite un registro sencillo mediante \textit{Facebook} o con un correo electrónico, una vez en el sistema, este ofrece la posibilidad de seleccionar entre distintos proveedores de energía y una vez se ha seleccionado uno de esta lista nos da la posibilidad de o subir los datos o cogerlos directamente del proveedor si esto esta disponible.
+
+Este sistema en concreto, más que un gestor de energía es un visualizador que muestra el consumo al usuario de una manera amigable y busca concienciarlo haciéndole entender los datos.
+
+La puntuación de Leafully se muestra en el cuadro \ref{tab:leafully}:
+
+\estatArt
+{5}
+{1}
+{3}
+{1}
+{5}
+{5}
+{5}
+{5}
+{26}
+{Puntuación Leafully \label{tab:leafully}}
+
+\subsubsection{Dexma}
+
+Dexma~\cite{dexma} es una empresa de gestión energética y dentro de esta cuentan con distintos productos, este análisis se centrará en su \textit{software} \textbf{DEXCell Energy Manager} el cual es una solución de gestión de la energía basada en la nube que ofrece a los usuarios visibilidad en tiempo real de toda su constelación de uso de la energía, independientemente de la distribución, la complejidad o el tamaño, de modo que puedan aprovechar los datos para identificar y priorizar oportunidades de ahorro
+
+La puntuación de Dexma se muestra en el cuadro \ref{tab:dexma}:
+
+\estatArt
+{3}
+{5}
+{5}
+{1}
+{5}
+{5}
+{1}
+{1}
+{26}
+{Puntuación Dexma \label{tab:dexma}}
+
+\subsubsection{Seinon}
+
+Seinon~\cite{seinon} es un sistema de gestión energética que se basa en una solución tanto \textit{software} como \textit{hardware}.
+Para este proyecto solo se analizará la parte \textit{software} que permite la monitorización, alarmas, telecontrol e informes de ahorro y eficiencia energética, pero para la conclusión se tendrá en cuenta que esto se vende como un paquete.
+
+La puntuación de Seinon se muestra en el cuadro \ref{tab:seinon}:
+
+\estatArt
+{3}
+{3}
+{5}
+{1}
+{5}
+{5}
+{5}
+{1}
+{28}
+{Puntuación Seinon \label{tab:seinon}}
+
+\subsubsection{Smarkia}
+
+Smarkia~\cite{smarkia} cuenta con una herramienta llamada \textbf{Smarkia Monitor}, la cual es una herramienta \textit{cloud} do monitorización de la energía. Entre las funcionalidades que ofrece llaman la atención: la automatización de procesos (avisa de las desviaciones que se produzcan el el consumo previsto), la imputación de costes y la flexibilidad en la generación de informes.
+
+La puntuación de Smarkia se muestra en el cuadro \ref{tab:smarkia}:
+
+\estatArt
+{3}
+{3}
+{5}
+{1}
+{5}
+{5}
+{5}
+{1}
+{28}
+{Puntuación Smarkia \label{tab:smarkia}}
+
+\subsubsection{Conclusiones del análisis}
+Después de realizar el análisis de distintas herramientas de gestión, vemos que las que han obtenido una puntuación mayor teniendo en cuenta nuestros criterios son: Opower y Enerbyte. Ambas son herramientas para mejorar la eficiencia energética de los usuarios y buscan mediante distintos métodos concienciar a los usuarios de su consumo.
+
+Ambas son dos buenas opciones y son bastante parecidas a lo que se quiere realizar en este proyecto, sin embargo hay algunos puntos que vale la pena destacar:
+
+En primer lugar, la mayor parte de herramientas son vendidas como el producto de una empresa y para poder utilizarlas te has de poner en contacto con la empresa que ha creado la herramienta y contratarla como un servicio (muchas de estas empresas cuentan con una versión de demostración para poder ver como funcionan).
+
+En segundo lugar, da la sensación que todas estas herramientas van orientadas a grandes empresas, donde el gasto energético es mayor y no busca ayudar al ciudadano de a pie que intenta ahorrar un poco a final de mes.
+
+En último lugar, en este proyecto ponemos mucho énfasis en la parte de gamificación y enseñar al usuario, en cambio la mayor parte de herramientas actuales muestran datos y algunas de ellas aportan consejos, pero no de la manera que nosotros buscamos.
+
+A partir de estas conclusiones, se puede observar que el mercado de la gestión de energía no es un mercado sencillo y actualmente ya existen muchas aplicaciones que se encargan de hacer esto. Pese a esta dificultad, también se ha observado que hay una parte del mercado que no se esta teniendo en cuenta, la cual en este proyecto se considera un factor muy decisivo.
+
+Además de esto, pese a tratarse de un gestor de energía, gracias a la gamificación se espera ir un paso más allá y ayudar al usuario a mejorar la eficiencia de su hogar a la vez que aprende, consiguiendo un objetivo que actualmente ninguna de las soluciones que hay proporciona.
+
+Por todas estas razones, se prevé que la solución software creada en este proyecto, podría tener una gran acogida por los usuarios, ya que aporta funcionalidades que la diferencian de la resta y que pueden ser muy interesantes para estos.
+
+

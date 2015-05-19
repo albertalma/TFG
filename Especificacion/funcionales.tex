@@ -1,0 +1,221 @@
+\subsection{Requisitos funcionales}
+Dado que el proyecto utiliza la metodologia agil \textit{SCRUM} los requisitos funcionales de este vienen definidos por historias de usuario, las cuales se encargan de describir las distintas funcionalidades del sistema.
+\subsubsection{Historias de usuario}
+
+Las historias de usuario que se enumeran a continuación se han ido definiendo a lo largo del proyecto durante los \textit{Sprint Plannings}.
+
+Las partes que contiene cada historia de usuario son:
+\begin{description}
+\item[Título] Identifica la historia de usuario (contiene un número pero simplemente para tener las distintas historias enumeradas).
+\item[Texto] Se especifica \textbf{quien} quiere realizar dicha historia, \textbf{que} quiere realizar y \textbf{para que}.
+\item[Criterios de aceptación] Una lista con los criterios que ha de cumplir dicha funcionalidad para que sea aceptada por negocio.
+\end{description}
+
+La historia de usuario 0, nos muestra un ejemplo de la estructura de estas:
+
+
+%Macro para pintar historias de usuario
+\newcounter{counterHistorias} 
+
+
+
+\newcommand{\historiaDeUsuario}[5]{
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{@{}l@{}}
+\toprule
+\large{\textbf{\arabic{counterHistorias} {#1}}}   
+\\ \midrule
+\begin{minipage}{5in}
+            \vskip 4pt
+            \begin{description}
+                \item[Como] {#2}
+                \item[Quiero] {#3}
+                \item[Para poder] {#4}
+            \end{description}
+            \vskip 4pt
+        \end{minipage}           
+\\ \midrule
+Criterios de aceptación 
+\\ \midrule
+\begin{minipage}{5in}
+            \vskip 4pt
+            \begin{itemize}
+                {#5}
+            \end{itemize}
+            \vskip 4pt
+        \end{minipage}                 
+\\ \bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+\stepcounter{counterHistorias}
+}
+
+    
+\historiaDeUsuario
+{Historia de Usuario}
+{Usuario}
+{hacer algo}
+{obtener un resultado}
+{
+    \item Criterio 1.
+    \item Criterio 2.
+}
+
+\historiaDeUsuario
+{Registrarse en el sistema}
+{Usuario}
+{poder darme de alta en el sistema}
+{posteriormente entrar en él}
+{
+\item Mostrar un formulario de registro compuesto por: e-mail (único) y contraseña.
+\item Una vez rellenado el formulario guardar los datos del usuario.
+}
+
+\historiaDeUsuario
+{Iniciar sesión}
+{Usuario}
+{acceder al sistema}
+{acceder a las funcionalidades}
+{
+\item Mostrar un formulario de inicio de sesión compuesto por: e-mail y contraseña.
+    \item Entrar en el sistema con las credenciales correctas.
+    \item Mostrar perfil del usuario.
+    \item No se ha de poder entrar sin unas credenciales válidas.
+}
+
+\historiaDeUsuario
+{Cerrar sesión}
+{Usuario}
+{cerrar la sesión actual}
+{cambiar de usuario}
+{
+    \item En la barra del portal aparecerá la opción de cerrar sesión
+    \item Una vez se haya cerrado la sesión, se mostrará la pantalla de inicio de sesión como muestra de que no hay ninguna sesión abierta.
+}
+
+\historiaDeUsuario
+{Visualizar perfil}
+{Usuario}
+{visualizar mi perfil}
+{ver y editar mi información y la de mis edificios}
+{
+    \item Mostrar perfil dependiendo del tipo de usuario.
+    \item \textbf{Empresa} se trata del caso concreto de VIAS y LAVOLA, se les mostrara una lista con los edificios que tienen a cargo .
+    \item \textbf{Terciario} usuarios que cuenten con edificios del sector terciario (administración, negocios...), se les mostrará un perfil más orientado a sus necesidades.
+    \item \textbf{Residencial} usuarios que cuenten con hogares particulares, se les mostrara toda la parte de gamificación.
+}
+
+\historiaDeUsuario
+{Perfil empresa}
+{Empresa}
+{ver una lista de mis edificios}
+{ver y editar la información de estos}
+{
+    \item Mostrar una lista con los edificios que ha creado la empresa
+    \item Acceder al formulario de creación de edificios.
+    \item Acceder a la edición de los edificios.
+    \item Eliminar edificios.
+}
+
+\historiaDeUsuario
+{Definir edificio}
+{Usuario}
+{crear un edificio}
+{guardar su información en el sistema y posteriormente acceder a más funcionalidades}
+{
+    \item El Formulario tendrá que contar con los siguientes campos para definir el edificio: provincia (a escoger entre Madrid o Barcelona), población, tipo de calle, dirección y número. 
+    \item Definir el número de bloques, escaleras, plantas y puertas.
+    \item Definir el sector del edificio.
+}
+
+\historiaDeUsuario
+{Definir Factores Pasivos}
+{Usuario}
+{definir los factores pasivos de mi edificio}
+{guardar la información para las posteriores recomendaciones}
+{
+    \item Definir solución constructiva del edificio entre: M1, M2, M3, M4(U) Unifamiliar, M4(P) Plurifamiliar o M5.
+    \item Definir la cubierta del edificio entre: C1 Inclinada, C2 Plana, C3 Inclinada, C4 Plana o Ninguna.
+    \item Definir acristalamiento entre: H1 Simple, H2 Simple, H3 Doble.
+    \item Especificar año de construcción y de la última remodelación.
+}
+
+\historiaDeUsuario
+{Definir Factores Activos I}
+{Usuario}
+{definir los factores activos de mi edificio (ACS, refrigeración y calefacción)}
+{guardar la información para las posteriores recomendaciones}
+{
+    \item Definir el Agua Caliente y Sanitaria (ACS) que utiliza el edificio: Ninguno, Termoacumulador electrico, Termoacumulador gas, Caldera Gasoil. Caldera GLP o Caldera Gas Natural.
+    \item Definir el sistema de refrigeración: Ninguno, Bomba de calor o Planta enfriadora.
+    \item Definir el sistema de calefacción: Ninguno, Bomba de Calor, Caldera Gasoil. Caldera GLP o Caldera Gas Natural.
+}
+
+\historiaDeUsuario
+{Definir Factores Activos II}
+{Usuario}
+{definir los factores activos de mi edificio (Equipos)}
+{guardar la información para las posteriores recomendaciones}
+{
+    \item Dependiendo del sector al que pertenezca el edificio mostrar una lista con los diferentes equipos que puede contener.
+    \item Poder escoger que equipos contiene el edificio y cantidad.
+}
+
+\historiaDeUsuario
+{Definir Factores Activos III}
+{Usuario}
+{definir los factores activos de mi edificio (Iluminación)}
+{guardar la información para las posteriores recomendaciones}
+{
+    \item Mostrar una lista con los distintos tipos de iluminación que puede tener el edificio.
+    \item Escoger los distintos tipos de iluminación y cantidad de cada una.
+}
+
+\historiaDeUsuario
+{Obtener información del Catastro}
+{Usuario}
+{obtener información del catastro}
+{tener una información fiable y no tener que rellenar todos los datos del formulario}
+{
+    \item A partir de los datos del edificio conectar con el servicio del Catastro.
+    \item Una vez obtenidos los datos, parsearlos para poder obtener aquellos que son necesarios.
+    \item Mostrar en el formulario los datos obtenidos del catastro.
+}
+
+\historiaDeUsuario
+{Editar Edificio}
+{Empresa}
+{editar los datos de mis edificios}
+{modificar los datos ya sea, por reformas o por algún error en los datos}
+{
+    \item Mostrar los distintos hogares asociados al edificio.
+    \item Poder editar los factores activos y pasivos como en las historias de usuario de definición de factores activos y pasivos. 
+}
+
+\historiaDeUsuario
+{Editar hogares asociados a edificios}
+{Empresa}
+{editar unos datos concretos de los hogares que están asociados a mis edificios}
+{modificar estos datos para que no sea necesario que el usuario particular tenga esa información}
+{
+    \item Definir la orientación del hogar: Norte, Noreste, Este, Sudeste, Sur, Sudoeste, Oeste y Noroeste.
+    \item Definir tipología, la lista de tipologías dependerá del sector del edificio.
+    \item Definir superficie del edificio.
+}
+
+\historiaDeUsuario
+{Promocionar Hogar}
+{Empresa}
+{asignar hogares a usuarios particulares}
+{asignar los hogares de mis edificios a los usuarios que considere oportunos}
+{
+    \item Mostrar una lista con los usuarios registrados en el sistema.
+    \item Asignar un hogar al usuario seleccionado.
+}
+
+\clearpage
+
+    
+    

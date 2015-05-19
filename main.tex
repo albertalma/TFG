@@ -1,7 +1,16 @@
-\documentclass{article}
+\documentclass[a4paper]{scrartcl}
 \usepackage[utf8]{inputenc}
 \usepackage{natbib}
 \usepackage{graphicx}
+\usepackage{placeins}
+\usepackage[spanish]{babel}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{eurosym}
+\usepackage{tocbibind}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{booktabs}
 
 \setlength{\parskip}{1em}
 
@@ -9,11 +18,39 @@
 
 \input{front.tex}
 
-\input{GEP/scope.tex}
 
+\pagenumbering{gobble}
+\tableofcontents
+\cleardoublepage
+\pagenumbering{arabic}
 
+\setcounter{secnumdepth}{4}
 
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\setcounter{page}{1}
+
+\input{GEP/introduction.tex}
+\clearpage
+
+\section{Gestión del proyecto}
+\input{GEP/GEP.tex}
+\section{Especificación}
+\input{Especificacion/main.tex}
+\section{Diseño Arquitectónico}
+\input{Diseno/main.tex}
+\section{Desarrollo}
+\input{Desarrollo/main.tex}
+\section{Lineas de futuro}
+\input{Futuro/main.tex}
+\section{Anexo}
+\input{Anexo/main.tex}
+\clearpage
 
 \bibliographystyle{plain}
-\bibliography{references}
+\bibliography{Referencias/references.bib}
+
 \end{document}

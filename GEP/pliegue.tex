@@ -1,0 +1,77 @@
+\section{Objetivos}
+El objetivo principal de este proyecto es crear una herramienta interactiva capaz de incidir en el comportamiento de los usuarios para mejorar la eficiencia energética de sus edificios.
+Para esto,  se creará un sistema software que se alimentará de un sistema de cosimulación multiagente\footnote{NECADA: http://necada.com/home/about}. Este sistema consistirá en un portal web.
+Los objetivos dentro del proyecto van ligado a las funcionalidades de este sistema, por tanto los objetivos de este proyecto son:
+\begin{description}
+\item[Gestión de usuarios] \hfill \\
+El primer objetivo será que el sistema sea capaz de gestionar usuarios, es decir, se espera que los usuarios puedan registrarse en el sistema y posteriormente entrar en él con sus credenciales.
+\item[Gestión de edificios]  \hfill \\
+El segundo objetivo será que un usuario una vez registrado pueda entrar en el sistema los datos de sus edificios y si hiciera falta modificarlos.
+\item[Sistema de recomendaciones] \hfill \\
+El tercer objetivo, es la parte más importante del sistema ya que es la funcionalidad principal. Se espera que el sistema a partir de los datos obtenidos de \textit{NECADA} y de los datos que el usuario haya añadido de sus edificios, sea capaz de mostrar una serie de recomendaciones/consejos para mejorar la eficiencia energética de los edificios de los usuarios.
+\item[Sistema Gamificado] \hfill \\
+El ultimo objetivo es que el sistema siga una estrategia de gamificación, es decir, que mediante juegos/retos ir consiguiendo atraer a los usuarios y de esta manera concienciarlos de una manera más amena, a la vez que se consigue llegar a un número mayor de usuarios.
+\end{description}
+\clearpage
+\section{Alcance}
+Este proyecto se encuentra dentro de un sistema mayor que se basa en dos componentes: el primero un sistema de cosimulación multiagente que se encarga de proporcionar datos sobre la eficiencia energética de los edificios y el segundo una aplicación gamificada.
+
+Este proyecto se centrará en la realización de esta aplicación gamificada, la cual será un portal web que tendrá que tener las funcionalidades que se explican en el apartado de objetivos.
+\clearpage
+\section{Asignaturas especialidad}
+\subsection{Arquitectura del Software (AS)}
+En AS obtuve conocimientos de buenas prácticas para el diseño de software. Estos conocimientos de diseño son claramente aplicables a este proyecto ya que además las tecnologías que usa facilitan el MVC\footnote{Model-Vista-Controlador: El proyecto utilizará AngularJS y NodeJS, ambos orientados a este tipo de arquitectura}.
+\subsection{Aplicaciones y Servicios Web (ASW)}
+El proyecto consistirá en el desarrollo de un portal web, por tanto se utilizará el conocimiento obtenido de diseño y buenas practicas de este tipo de aplicaciones.
+\subsection{Diseño de Bases de Datos (DBD)}
+El proyecto utilizará una base de datos relacional, con lo cual los conocimientos de bases de datos relacionales obtenidos en esta asignatura serán de ayuda.
+\subsection{Ingeniería de Requisitos (ER)}
+Los conocimientos de esta asignatura serán de gran ayuda a la hora de realizar la documentación, ya que casi toda la asignatura consiste en la realización de documentación para proyectos.
+\subsection{Gestión de Proyectos de Software (GPS)}
+En esta asignatura, se busca mostrar como funciona un proyecto de software, en mi caso me está siendo de gran ayuda ya que en ella estudiamos y trabajamos con metodologias agiles, lo cual me facilita mucho a la hora de trabajar en la empresa.
+\subsection{Proyecto de Ingenieria del Software (PES)}
+Esta asignatura consiste en la realización de un proyecto y sirve de ayuda para el TFG ya que se puede llegar a plantear como un entreno para este.
+\subsection{Conceptos Avanzados de Programación (CAP) \textit{Complementaria}}
+Este proyecto se realizará en \textit{JavaScript} y en esta asignatura se trabajan varios de sus conceptos con este lenguaje, lo cual es un conocimiento que podré reaprovechar. Además de conceptos de programación que sin hacer esta asignatura no tendria en cuenta.
+\subsection{Conceptos de Sistemas de la Información (CSI) \textit{Complementaria}}
+La forma de evaluación de la asignatura (mediante presentaciones) ayuda a conseguir confianza y mejorar la forma de presentar de los alumnos, lo cual para realizar el TFG es de gran ayuda.
+\clearpage
+\section{Adecuación a la especialidad}
+El proyecto se basa en el desarrollo de un sistema software. 
+Este sistema se adecua a las características de la especialidad ya que, como ingeniero de software se espera que participe en el desarrollo, evaluación y mantenimiento de sistemas software que satisfagan los requisitos de los usuarios. 
+
+Dentro de este proyecto, me encargaré tanto del desarrollo como del diseño del sistema software (gracias a los conocimientos adquiridos en las distintas asignaturas de la especialidad), es decir, a partir de los requisitos que se vayan obteniendo durante los distintos \textit{sprints\footnote{Iteración de trabajo, relacionado con la metodología ágil: SCRUM}} del proyecto se irá diseñando el sistema haciendo que este cumpla una serie de requisitos de usabilidad, fiabilidad y eficiencia. Además del diseño se realizará la implementación de este, con lo que se espera conseguir un sistema fiable y usable para conseguir la satisfacción total del cliente.
+\clearpage
+\section{Competencias técnicas}
+\begin{itemize}
+\item CES1.1: Desenvolupar, mantenir i avaluar sistemes i serveis software complexos i/o crítics. [Bastant]
+
+El proyecto se basa en el desarrollo de un sistema software, en concreto un portal web.
+\item CES1.2: Donar solució a problemes d'integració en funció de les estratègies, dels estàndards i de les tecnologies disponibles. [En profunditat]
+
+Para el proyecto se ha realizado un estudio sobre las tecnologías disponibles para ver cual podía adaptarse mejor al proyecto.
+\item CES1.3: Identificar, avaluar i gestionar els riscos potencials associats a la construcció de software que es poguessin presentar. [En profunditat]
+
+En la documentación del proyecto hay todo un apartado sobre los riesgos que puede conllevar la construcción de este software.
+\item CES1.4: Desenvolupar, mantenir i avaluar serveis i aplicacions distribuïdes amb suport de xarxa. [Bastant]
+
+La aplicación que se va a realizar es un portal web, además de esto se alimentará de otros servicios de webservice\footnote{Catastro Virtual: http://www1.sedecatastro.gob.es/}
+\item CES1.5: Especificar, dissenyar, implementar i avaluar bases de dades. [Bastant]
+
+Para el sistema se tendrá que especificar, diseñar e implementar toda la base de datos desde el inicio.
+\item CES1.6: Administrar bases de dades (CIS4.3) [Una mica]
+
+Una vez implementada la base de datos habrá un tiempo de administración para comprobar su correcto funcionamiento.
+\item CES1.7: Controlar la qualitat i dissenyar proves en la producció de software. [Una mica]
+
+Se realizarán algunos tests dentro del sistema.
+\item CES1.9: Demostrar comprensió en la gestió i govern dels sistemes software. [Bastant]
+
+Se realizará todo el diseño del sistema software.
+\item CES2.1: Definir i gestionar els requisits d'un sistema software. [En profunditat]
+
+El sistema no tiene nada definido, así que se tendrá que definir todo desde el inicio para que cumpla los requisitos establecidos.
+\item CES2.2: Dissenyar solucions apropiades en un o més dominis d'aplicació, utilitzant mètodes d'enginyeria del software que integrin aspectes ètics, socials, legals i econòmics. [En profunditat]
+
+La aplicación busca mejorar la eficiencia energética de los usuarios, a la vez que se espera que se pueda convertir en un producto más adelante, por tanto se integran distintos aspectos tanto éticos como económicos.
+\end{itemize}
